@@ -75,7 +75,7 @@ class OssStorage implements Storage
 
                 $url = "{$domain}/{$res[0]['key']}";
 
-                $ossUrl = $url . '?id=' . $attachment['id'];
+                $ossUrl = $url;
                 $ossUrl = '//' . preg_replace('/^https?:\/\//', '', $ossUrl); //去掉http协议头，以//开头
                 $attachment['url'] = $ossUrl;
                 $attachment->save();
